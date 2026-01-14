@@ -9,3 +9,4 @@ class Dog:
     def update(self):
         # later: random bark, music trigger, etc.
         pass
+
