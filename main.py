@@ -21,7 +21,13 @@ class App:
         # position top-right
         screen = self.window.get_screen()
         sw = screen.get_width()
-        self.window.move(sw - 220, 20)
+        self.window.move(20, 20)
+        
+
+        self.window.realize()
+        gdk_window = self.window.get_window()
+        gdk_window.set_pass_through(True)
+        
 
         # 10 FPS → VERY light
         GLib.timeout_add(100, self.tick)
